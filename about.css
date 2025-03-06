@@ -13,6 +13,11 @@ li{
 list-style: none;
 }
 
+body{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
     .container{
         display: flex;
         min-height: 100vh;
