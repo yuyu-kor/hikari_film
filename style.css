@@ -12,11 +12,18 @@
     li{
     list-style: none;
     }
+
+    body{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
     
     .container{
         display: flex;
         min-height: 100vh;
-        justify-content: center;
+        width: 100%;
+        justify-content: space-between;
+        padding-right: 50px;
     }
     
     .sidebar_wrap{
@@ -90,25 +97,22 @@
         opacity: 1;
     }
     
-    .main_img{
-        display: flex;
-    }
-    
-    .main_img img{
-        width: 593.94px;
+    .main_img img {
+        width: 550px;
         max-width: 100%;
+        display: block;
+        margin: auto;
     }
     
-    .main_txt{
+    .main_txt {
         font-weight: lighter;
         font-size: 12px;
         line-height: 26px;
         color: #999;
         text-align: center;
-        min-width: 260.5px;
-        display: flex;
-        justify-content: center;
+        display: flex; 
         align-items: center;
+        flex-grow: 0; /* 불필요한 확장을 막아 너무 오른쪽으로 가는 걸 방지 */
     }
     
     footer{
