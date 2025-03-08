@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>hikari__film</title>
+        <link rel="stylesheet" href="contact.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar_wrap">
+                <header>
+                    <h1>HIKARI_FILM record</h1>
+                </header>
+                <nav>
+                    <ul>
+                        <li class="nav_li_home">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="nav_li_about">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="notice.html">Notice</a>
+                        </li>
+                        <li class="nav_li_contact">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/hikari__film/" target="_blank">Archive</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <button class="hambuger" aria-label="open the menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <main>
+                <div class="main_contact">
+                    <a href="https://www.instagram.com/hikari__film/" target="_blank">@hikari__film</a>
+                    <p><a href="tel:010-4727-0932">010-4727-0932</a></p>
+                    <p><a href="mailto:rkdrudgns18@naver.com">rkdrudgns18@naver.com</a></p>
+                </div>
+            </main>
+            <div class="contact-form">
+                <h3>📷 촬영 문의</h3>
+                <form id="contactForm" action="send_mail.php" method="post">
+                    <label for="name">성함</label>
+                    <input type="text" id="name" name="name" required>
+            
+                    <label for="phone">연락처</label>
+                    <input type="tel" id="phone" name="phone" required>
+            
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" required>
+            
+                    <label for="concept">컨셉 및 장소</label>
+                    <textarea id="concept" name="concept" rows="2" required></textarea>
+            
+                    <label for="date">촬영 희망 날짜 및 시간</label>
+                    <input type="datetime-local" id="date" name="date" required>
+            
+                    <label for="marketing">마케팅 동의 여부</label>
+                    <select id="marketing" name="marketing">
+                        <option value="O">O (동의)</option>
+                        <option value="X">X (비동의)</option>
+                    </select>
+                    <button type="submit">문의하기</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p>Powered by yuyutopia</p>
+        </footer>
+        <script src="main.js"></script>
+    </body>
+</html>
