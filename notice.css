@@ -18,7 +18,7 @@ html{
         margin-left: 15px;
         margin-right: 15px;
 }
-    }
+    
     
         .container{
             display: flex;
@@ -115,7 +115,7 @@ html{
     }
 
 main{
-    text-align: center;
+    /* text-align: center; */
     list-style-position: inside;
     margin-bottom: 150px;
 }
