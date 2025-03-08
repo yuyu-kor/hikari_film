@@ -1,0 +1,277 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    }
+    
+    a, a:link, a:visited{
+    color:inherit;
+    text-decoration: none;
+    }    
+
+html{
+    scroll-behavior: smooth;
+}
+
+    body{
+        font-size: 13px;
+        margin-left: 15px;
+        margin-right: 15px;
+}
+    
+    
+        .container{
+            display: flex;
+            min-height: 100vh;
+        }
+    
+    .sidebar_wrap{
+        padding-top: 50px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-width: 246.75px;
+    }
+    
+    .sidebar_wrap h1{
+        font-weight: lighter;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .sidebar_wrap nav ul{
+        list-style: none;
+    }
+    
+    nav li{
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        padding-top: 40px;
+    }
+    
+    .nav_li_contact{
+        color: #999;
+        text-decoration: underline;
+    }
+    
+    /* 햄버거 버튼 기본 스타일 */
+    .hambuger {
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    /* 햄버거 버튼 내부 막대 스타일 */
+    .hambuger span {
+        display: block;
+        background-color: #444;
+        height: 3px;
+        width: 100%;
+        margin: 4px 0;
+        transition: all 0.4s ease-in-out;
+    }
+    
+    /* X자로 변할 때 스타일 (버튼이 활성화되었을 때 유지됨) */
+    .hambuger.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    
+    .hambuger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hambuger.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    
+    /* 기본 햄버거 모양으로 복구 (active 클래스가 없을 때) */
+    .hambuger span:nth-child(1),
+    .hambuger span:nth-child(2),
+    .hambuger span:nth-child(3) {
+        transform: none;
+        opacity: 1;
+    }
+    
+    footer{
+        padding-top: 164px;
+        padding-bottom: 160px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    footer p{
+        font-size: 12.8px;
+        line-height: 19px;
+        color: #ddd;
+    }
+
+.main_contact{
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.main_contact a{
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.main_contact a:hover{
+    color: #999;
+}
+
+/* 🎯 촬영 문의 입력 폼 스타일 */
+.contact-form {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: left;
+    height: 100%;
+    margin: 100px 100px;
+}
+
+.contact-form h3 {
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #555;
+}
+
+.contact-form input, 
+.contact-form textarea, 
+.contact-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.contact-form button {
+    width: 100%;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #555;
+}
+
+
+@media screen and (max-width: 792px) {
+    .sidebar_wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw; /* 전체 화면 너비 */
+        height: 100vh; /* 전체 화면 높이 */
+        background: white; /* 완전 흰색 배경 */
+        box-shadow: none;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        overflow: hidden; /* 내부 스크롤 방지 */
+    }
+
+    /* 햄버거 버튼 보이게 설정 */
+    .hambuger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 24px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    /* 햄버거 클릭 시 전체 화면 메뉴 표시 */
+    .sidebar_wrap.active {
+        opacity: 1;
+        visibility: visible;
+        font-size: 17px;
+    }
+
+    /* 스크롤 완전히 막기 */
+    html.noscroll,
+    body.noscroll {
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 574px) {
+    .main_img{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* 가운데 정렬 */
+        align-items: center;
+        width: 100%;
+        padding-top: 60px;
+        text-align: center;
+    }
+
+    .main_img img{
+        width: 90%;
+        height: auto;
+    }
+
+    .main_txt{
+        padding-top: 13px;
+        font-size: 14px;
+    }
+
+    .hambuger {
+        top: 15px;
+        right: 15px;
+    }
+
+    footer{
+        padding-top: 30px;
+        padding-bottom: 22px;
+    }
+}
+
+#back-to-top {
+    display: block;
+    color: rgb(184, 184, 184);
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+}
