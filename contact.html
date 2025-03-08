@@ -49,24 +49,24 @@
                 <h3>📷 촬영 문의</h3>
                 <form id="contactForm" action="send_mail.php" method="post">
                     <label for="name">성함</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name">
             
                     <label for="phone">연락처</label>
-                    <input type="tel" id="phone" name="phone" required>
+                    <input type="tel" id="phone" name="phone">
             
                     <label for="email">이메일</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email">
             
                     <label for="concept">컨셉 및 장소</label>
-                    <textarea id="concept" name="concept" rows="2" required></textarea>
+                    <textarea id="concept" name="concept" rows="2"></textarea>
             
                     <label for="date">촬영 희망 날짜 및 시간</label>
-                    <input type="datetime-local" id="date" name="date" required>
+                    <input type="datetime-local" id="date" name="date">
             
                     <label for="marketing">마케팅 동의 여부</label>
                     <select id="marketing" name="marketing">
-                        <option value="O">O (동의)</option>
-                        <option value="X">X (비동의)</option>
+                        <option value="O">동의</option>
+                        <option value="X">비동의</option>
                     </select>
                     <button type="submit">문의하기</button>
                 </form>
