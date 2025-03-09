@@ -182,11 +182,14 @@
     }
     
     @media screen and (max-width: 574px) {
-        .main_img{
+
+        .container{
             display: flex;
             flex-direction: column;
-            justify-content: center; /* 가운데 정렬 */
-            align-items: center;
+            justify-content: baseline;
+        }
+        .main_img{
+            display: flex;
             width: 100%;
             padding-top: 60px;
             text-align: center;
@@ -200,6 +203,9 @@
         .main_txt{
             padding-top: 13px;
             font-size: 14px;
+            text-align: center;
+            display: block;
+            width: 100%;
         }
     
         .hambuger {
